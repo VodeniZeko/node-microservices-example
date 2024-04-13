@@ -1,0 +1,12 @@
+{
+  "name": "microservices-example",
+  "version": "1.0.0",
+  "description": "This repository contains an example implementation of a microservices architecture using Node.js. The example demonstrates how to create and communicate between multiple microservices within a distributed system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
