@@ -8,5 +8,8 @@ The project consists of several microservices, each responsible for a specific f
 
 ### Technologies Used
 
-* Node.js
-* Express.js
+- Node.js
+- Express.js
+- axios
+- cors
+- nodemon
