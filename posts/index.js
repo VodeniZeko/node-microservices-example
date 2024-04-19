@@ -7,8 +7,8 @@ const axios = require("axios");
 const PORT = 4000;
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.json());
+app.use(cors());
 
 // Mock data
 const posts = {};
