@@ -29,7 +29,7 @@ app.post("/posts/:id/comments", async (req, res) => {
 	commentsByPostId[id] = comments;
 
 	try {
-		const response = await axios.post("http://localhost:4005/events", {
+		await axios.post("http://localhost:4005/events", {
 			type: "CommentCreated",
 			data: {
 				id: commentId,
@@ -38,8 +38,6 @@ app.post("/posts/:id/comments", async (req, res) => {
 				status: "pending",
 			},
 		});
-
-		console.log(response.data);
 	} catch (error) {
 		console.error("Error posting comment", error.message);
 		res.status(500).send("Error posting comment");

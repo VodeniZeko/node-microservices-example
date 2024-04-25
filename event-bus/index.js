@@ -7,8 +7,19 @@ const PORT = 4005;
 const app = express();
 app.use(bodyParser.json());
 
+const events = [];
+
+app.get("/events", (req, res) => {
+	// any failed services get back up and running can request all events
+	// from the event-bus and re-process them
+	res.send(events);
+});
+
 app.post("/events", async (req, res) => {
 	const event = req.body;
+
+	// Log/store the event in case any of the services fails
+	events.push(event);
 
 	try {
 		await axios.post("http://localhost:4000/events", event);
