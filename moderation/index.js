@@ -39,7 +39,7 @@ app.post("/events", async (req, res) => {
 				? "rejected"
 				: "approved";
 
-			axios.post("http://localhost:4005/events", {
+			axios.post("http://posts-clusterip-srv:4005/events", {
 				type: "CommentModerated",
 				data: {
 					id: data.id,

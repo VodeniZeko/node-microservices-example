@@ -58,7 +58,7 @@ app.listen(PORT, async () => {
 
 	try {
 		// Fetch all events, anytime the service starts and/or fails then goes back up
-		const res = await axios.get("http://localhost:4005/events");
+		const res = await axios.get("http://posts-clusterip-srv:4005/events");
 
 		// Process all events to cath up
 		for (let event of res.data) {
