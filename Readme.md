@@ -13,3 +13,5 @@ The project consists of several microservices, each responsible for a specific f
 - axios
 - cors
 - nodemon
+- Docker
+- Kubernetes
