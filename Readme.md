@@ -13,10 +13,22 @@ The project consists of several microservices, each responsible for a specific f
 - **axios:** A promise-based HTTP client for making requests to other services.
 - **cors:** Cross-Origin Resource Sharing middleware for Express.js to allow requests from other domains.
 - **nodemon:** A utility to monitor for changes in your Node.js application and automatically restart the server.
+- **Skaffold:** A command-line tool that facilitates continuous development for Kubernetes applications. Skaffold handles the workflow for building, pushing, and deploying applications in Kubernetes.
 
-### Deployment
+### Deployment with Skaffold
 
-Each microservice is Dockerized and deployed in a Kubernetes cluster for easy management and scalability.
+To deploy the microservices using Skaffold, follow these basic instructions:
+
+1. Install Skaffold by following the instructions in the [official documentation](https://skaffold.dev/docs/install/).
+
+2. Ensure that you have a Kubernetes cluster configured and accessible from your local environment.
+
+3. Navigate to the root directory of the project where the Skaffold configuration file (`skaffold.yaml`) is located.
+
+4. Run the following command to deploy the microservices to your Kubernetes cluster:
+
+
+This command will build and deploy the microservices defined in the `skaffold.yaml` file to your Kubernetes cluster. Skaffold will automatically watch for changes in your code and redeploy the microservices as needed.
 
 ### Future Improvements
 
@@ -25,3 +37,4 @@ Each microservice is Dockerized and deployed in a Kubernetes cluster for easy ma
 - Enhance error handling and resilience strategies.
 - Add authentication and authorization mechanisms.
 - Implement CI/CD pipelines for automated testing and deployment.
+
